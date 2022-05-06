@@ -1,0 +1,15 @@
+ls
+ls -l 
+cat >abc
+how r uh
+cat abc
+useradd frd
+passwd
+login frd
+chmod +x file3
+ls -l
+chmod -x file3
+ls -l
+chmod u-x,g+w,o-rw file3
+ls -l
+

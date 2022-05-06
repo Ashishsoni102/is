@@ -1,0 +1,17 @@
+ifconfig
+apt-get install nano
+apt-get install snort
+cd /etc/snort
+nano snort.conf
+ip address removing any
+cd /etc/snort/rules
+nano local.rules
+alert tcp any ant -> any any(msg:"Detection of TCP connection";sid:10001;)
+alert icmp (ip address) any ->any any(msg:"Detection of ICMP connection";sid:10002;)
+
+snort -T -C /etc/snort/snort.conf
+
+snort -A console -C /etc/snort/snort.conf
+
+apt-get install nmap
+ping ip address

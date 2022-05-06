@@ -1,0 +1,11 @@
+ipconfig
+ipconfig/all
+ipconfig/release
+ipconfig/renew
+ping www.google.co.in
+nslookup
+nslookup www.google.co.in
+netstat
+hostname
+getmac
+arp -a

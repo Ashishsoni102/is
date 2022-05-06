@@ -1,0 +1,19 @@
+Security Policies
+
+
+>apt-get install nano
+>apt-get install libpam-pwquality
+>cd /etc/pam.d
+>nano common-password
+#password policies for my user
+password      requiste pam_pwquality.so retry=3
+password      requiste pam_pwquality.so minlen=10 maxrepeat=3
+password      requiste pam_pwquality.so ucredit=1 lcredit=1    dcredit=1  ocredit=1
+password      requiste pam_pwquality.so reject_username
+password      requiste pam_pwquality.so difok=3
+>useradd user1
+>passwd user1
+>nano /etc/login.dfs
+PASS_MAX_DAYS  90
+PASS_MIN_DAYS  0
+PASS_WARN_AGE  5
